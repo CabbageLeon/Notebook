@@ -65,9 +65,35 @@ $$
 ![选频特性图](./pic/pic_2_9.png)
 在谐振点附近，有
 $$
-\xi = Q_L \frac{2 \Delta f}{f_0}
+\xi = Q_0 \frac{2 \Delta f}{f_0}
 $$
 $$
 \frac{K}{K_0} = \alpha = \frac{1}{\sqrt{1+\xi^2}}
 $$
 可见，|$\xi$| = 1处对应上下边界 
+* 相对失谐
+$$ 相对失谐 = \frac{f}{f_0}-\frac{f_0}{f}$$
+### 晶体管高频等效电路及频率参数
+
+#### 混合 $\pi$ 等效电路
+![混合pi](./pic/pic_2_10.PNG)
+其中 $r_{b'e}$ 和 $r_{ce}$ 可以忽略
+
+#### 晶体管的频率参数
+* 截止频率 $f_{\beta}$（共射截止频率）
+$\beta$ 下降到0.707 $\beta_0$ 时的频率
+* 特征频率 $f_T$
+$\beta$ 下降到1时的频率
+* 截止频率 $f_{\alpha}$（共基截止频率）
+$\alpha$ 下降道0.707 $\alpha_0$时候的频率
+#### 参数间的关系
+$$
+|\beta| = \frac{\beta_0}{\sqrt{1+(\frac{f}{f_{\beta}})^2}}
+$$
+
+式中 
+$$
+f_{\beta} = \frac{1}{2\pi C_{b'e }r_{b'e}}
+$$
+当 $f>>f_{\beta}$ 时，$|\beta| \approx \frac{\beta_0}{\frac{f}{f_{\beta}}} = \frac{\beta_0 f_{\beta}}{f} = \frac{f_T}{f}$
+其中 $f_T = \beta_0 f_\beta = \gamma \alpha_0 f_{\alpha}$
