@@ -12,6 +12,7 @@
 $s_{AM}(t) = [A_0+m(t)]cos \omega_c t = A_0 cos \omega_c t（载波项） + m(t)cos \omega_c t（边带项）$
 * 频域表达式
 $S_{AM}(\omega) = \pi A_0[\delta(\omega+\omega_c)+\delta(\omega-\omega_c)]（载波项）+\frac{1}{2}[M(\omega +\omega_c)+M(\omega -\omega_c)]（边带项）$
+* 带宽：$B_{AM} = 2f_H$
 ![AM信号的时域波形](./pic/pic_4_10.png)
 ![AM信号的频域波形](./pic/pic_4_11.png)
 线性调制：频谱为线性搬移，没有产生频率的畸变
@@ -36,16 +37,18 @@ $\eta_{DSB} = 100\%$
 DSB调制效率高，但是不能用包络检波法，解调方法复杂 
 ![例题](./pic/pic_4_16.png)
 #### 单边带调制SSB
+##### 滤波法
 DSB上下边带对称，信息相同，只需要传输其中一个
 ![滤波法](./pic/pic_4_17.png)
 信号带宽：$B_{SSB} = f_H$
 难点：要求边带滤波器在载频$\omega_c$处有陡峭的截止特性，由于理想滤波器物理不可实现，因此要求m(t)在$\omega = 0$处近似等于0
+
 **数学原理** ：调制信号为单频正弦波 $m(t) = A_mcos \omega_m t$
 **DSB 信号表达式**  
 \[
 S_{\text{DSB}}(t) = A_m \cos \omega_m t \cdot \cos \omega_c t = \frac{1}{2} A_m \cos (\omega_c + \omega_m) t + \frac{1}{2} A_m \cos (\omega_c - \omega_m) t
 \]
-
+##### 相移法
 **上边带 USB**  
 \[
 S_{\text{USB}}(t) = \frac{1}{2} A_m \cos (\omega_c + \omega_m) t = \frac{1}{2} A_m \cos \omega_m t \cdot \cos \omega_c t - \frac{1}{2} A_m \sin \omega_m t \cdot \sin \omega_c t
@@ -61,9 +64,10 @@ S_{\text{LSB}}(t) = \frac{1}{2} A_m \cos (\omega_c - \omega_m) t = \frac{1}{2} A
 A_m \cos \omega_m t \xrightarrow{\text{Hilbert变换}} A_m \cos \left( \omega_m t - \frac{\pi}{2} \right) = A_m \sin \omega_m t
 \]
 
-### 待补完
+![滤波法](./pic/pic_4_21.png)
 
-## 角度调制
+已调信号带宽：$B_{SSB} = f_H$
+## 角度调制(FM)
 ### 角度调制基本概念
 $$
 s_m(t) = Acos[\omega_c(t)+\phi(t)]
@@ -81,8 +85,10 @@ $\phi(t) = K_fA_m \int cos\omega_m \tau d\tau = \frac{K_fA_m}{\omega_m}sin\omega
 $$
 m_f = \frac{K_fA_m}{\omega_m} = \frac{\Delta \omega}{\omega_m} = \frac{\Delta f}{f_m}
 $$
+* **卡森公式**
+$B_{FM} = 2(m_f+1)f_{max}$,$f_m = \frac{\Delta f}{f_{max}}$
 ### 窄带调频（NBFM）
-* 定义：FM信号的最大瞬时相位偏移满足 $|K_f| << \frac{\pi}{6}(0.5)$，则为窄带调频
+* 定义：FM信号的最大瞬时相位偏移满足 $|K_f \int m(\tau)d \tau| << \frac{\pi}{6}$，则为窄带调频
 时域表达式：
 $$
 s_{NBFM}(t) \approx Acos\omega_c(t)-[AK_f \int m(\tau)d\tau] \cdot sin\omega_c t
@@ -104,8 +110,7 @@ $$
 S_{FM} = \pi A \sum_{-\infty}^{\infty}J_n(m_f)[\delta(\omega+\omega_c+n\omega_m)+\delta(\omega-\omega_c-n\omega_m)]
 $$
 其中 $J_n(m_f)$为第一类n阶贝赛尔函数
-* **卡森公式**
-$B_{FM} = 2(m_f+1)f_{max}$,$f_m = \frac{\Delta f}{f_{max}}$
+
 * FM信号的功率分配
  $$
  P_{FM} = \frac{A^2}{2} = P_C
@@ -130,4 +135,10 @@ $$
 $$
 \frac{S_o}{N_o} = \frac{\overline{m_o^2(t)}}{n_o^2(t)}
 $$
-
+#### 不同调制系统的制度增益
+* $G_{DSB}$ = 2
+* $G_{SSB}$ = 1
+* $G_{AM} = \frac{2 \overline{m^2(t)}}{A_0^2 +\overline{m^2(t)}} $
+AM系统包络检波的“门限效应”：
+![例题2](./pic/pic_4_22.png)
+* $G_{FM} = 3m_f^2(m_f +1)$
