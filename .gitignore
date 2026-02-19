@@ -1,1 +1,5 @@
 *.pdf
+data/
+open_flamingo/
+.idea/
+.vscode/

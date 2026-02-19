@@ -56,6 +56,6 @@ $$
 $$
 \begin{cases}
 E_x = E_{x_0}cos(\omega t-kz +\phi_{ex})\\
-E_y = E_{y_0} cos (\omega t-kz+\phi_{ey})
+E_y = E_{y_0} cos (\omega t-kz+\phi_{ey}) 
 \end{cases}
 $$

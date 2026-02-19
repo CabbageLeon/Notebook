@@ -33,6 +33,15 @@ $$
 * $P_O$:集电极输出的功率
 * $P_C$:晶体管损耗功率 
 其中 $\frac{U_{cm}}{E_c}$ 为电压利用系数
+### 三极管选型
+$$
+\begin{cases}
+BV_{ceo} \geq 2E_c\\
+f_T = 3～5 f_0\\
+P_{CM}>P_C\\
+I_{CM}>I_{C_{max}}
+\end{cases}
+$$
 ### 槽路效率
 ![](./pic/pic_3_3.png)
 $$

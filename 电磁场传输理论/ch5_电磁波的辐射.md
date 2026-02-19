@@ -88,6 +88,10 @@ $$
 $$
 #### 矢量磁位
 $$
-\vec{B} = \nabla \times \vec{A} = \frac{1}{2}Re(\dot{\vec{E}}\times\dot{\vec{H^*}})
+\begin{cases}
+\vec{B} = \nabla \times \vec{A} = \frac{1}{2}Re(\dot{\vec{E}}\times\dot{\vec{H^*}})\\
+\nabla \cdot \dot{A} = -j \omega \mu \epsilon \dot{\Phi} 
+\end{cases}
 $$
 其中 $\vec{A}$ 称为矢量磁位
+$k = \omega \sqrt{\mu \epsilon}$ 

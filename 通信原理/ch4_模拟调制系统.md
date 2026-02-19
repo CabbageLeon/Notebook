@@ -139,6 +139,7 @@ $$
 * $G_{DSB}$ = 2
 * $G_{SSB}$ = 1
 * $G_{AM} = \frac{2 \overline{m^2(t)}}{A_0^2 +\overline{m^2(t)}} $
+* $G_{FM} = 3m_f ^2 (m_f +1)$
 AM系统包络检波的“门限效应”：
 ![例题2](./pic/pic_4_22.png)
 * $G_{FM} = 3m_f^2(m_f +1)$

@@ -125,7 +125,7 @@ $$
 ![余弦滚降](./pic/pic_5_14.png)
 * 滚降系数： $\alpha = \frac{f_\Delta}{f_N}$
 * 系统带宽：$B = f_N+f_{\Delta} = (1+\alpha)f_N$
-* 频带利用率：$\eta = \frac{R_B}{B} = \frac{2}{1+\alpha}(Baud/Hz)$,$\etaf_b = \frac{2}{1+\alpha}log_2M(bps/Hz)$
+* 频带利用率：$\eta = \frac{R_B}{B} = \frac{2}{1+\alpha}(Baud/Hz)$,$\eta_b = \frac{2}{1+\alpha}log_2M(bps/Hz)$
 
 ### 解题思路总结
 1. 通过传输函数确定奈奎斯特带宽$f_N$
