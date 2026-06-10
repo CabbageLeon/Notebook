@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(g++ *)",
+      "Bash(ls *)"
+    ]
+  },
+  "$version": 3
+}

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.0)
 project(alg)
 set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 
@@ -18,3 +18,7 @@ add_executable(alg_6
         06_span_sum.cpp)
 add_executable(alg_7
         07_design_linklist.cpp)
+add_executable(alg_8
+        08_reverse_nodelist.cpp)
+add_executable(alg_19
+        19_removeDuplicates.cpp)

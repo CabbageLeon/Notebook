@@ -1,0 +1,8 @@
+{
+    "typeCheckingMode": "basic",
+    "useLibraryCodeForTypes": true,
+    "analyzeUnannotatedFunctions": true,
+    "extraPaths": [
+        "/home/leon/miniconda3/envs/dl-env/lib/python3.8/site-packages"
+    ]
+}
